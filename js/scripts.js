@@ -1,9 +1,10 @@
 $(document).ready(function() {
-  $("form#selectAnimal").submit(function(event) {
+  $("form#selectAnimal").change(function(event) {
     var outputAnimal = $("select#animal").val();
 
     if (outputAnimal === 'turtle')  {
       $('#turtle').show();
+      $('#snake','#otter').hide();
     } else if (outputAnimal === 'snake') {
       $('#snake').show();
     }
